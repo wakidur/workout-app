@@ -15,8 +15,9 @@
   * Connect to MongoDB.
   */
  //Set up default mongoose connection
- const mongoUri = 'mongodb://localhost:27017/trainerapp';
- mongoose.connect(process.env.MONGODB_URI || mongoUri, {
+//  const mongoUri = 'mongodb://localhost:27017/trainerapp';
+const mongoUri = process.env.MONGODB_URI || 'mongodb://wakidur:Wakidur_234@ds143242.mlab.com:43242/workout-app';
+ mongoose.connect(mongoUri, {
      useNewUrlParser: true,
      keepAlive: 1
  });
